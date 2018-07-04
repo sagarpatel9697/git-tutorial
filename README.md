@@ -54,10 +54,10 @@ Two types of VCS
 
 ### What is GITHUB
 
-- server to upload repository
-- backup funnctionality
+- Website/Server to upload repository
+- Backup funnctionality
 - GUI for repo
-- managing team
+- Manage team
 
 ### Is GIT related to GITHUB
 
@@ -67,3 +67,82 @@ GIT can also be used with others repository management system like bitbucket.
 ### A simple workflow
 
 ![GIT Workflow](./images/workflow.jpg)
+
+## Setup Repository
+
+1. Run `git init` command
+2. Add project files to folder and adding it to stage area via `git add` command
+3. Commit staged files with `git commit -m <Message>` command
+4. Link remote repository with local using `git remote add origin <repo url>` command
+5. Push all local repository commits to remote `git push`
+
+
+## Branching
+
+1. what are branches & commands?
+- Feature/Task wise branch
+- commands for create, checkout, merge & delete
+
+#### Create Branch
+
+`git branch <branch name>`
+
+you're still on ``master`` branch so for adding new features, you have to swicth on newly created branch. Follow next **checkout** step.
+
+#### Checkout Branch
+
+`git checkout <branch name>`
+
+Add new fetaures in your working repo and push it on remote repo. Now you can see new branch in branch list of github.
+
+#### Merge Branch
+
+`git merge <source branch name>`
+
+Add new fetaures in your working repo and push it on remote repo. Now you can see new branch in branch list of github.
+
+#### Delete Branch
+
+`git branch -d <branch name>` - From local repo
+
+`git push origin -d <branch name>` - From remote repo
+
+## Tags/Releases
+
+Specific points in history for repository called as release or versions.
+
+### Create Tag
+
+Cretae tag in local repository
+
+`git tag <tag name>`
+
+### Show Tag(s)
+
+Show list of tags in local repository
+
+`git tag`
+
+`git show <tag name>`
+
+### Push Tag
+
+Push tag to remote repository
+
+`git push origin <tag name>`
+
+### Delete Tag
+
+Delete tag from repository
+
+`git tag -d <tag name>` - From local repo
+
+`git push origin -d <tag name>` - From remote repo
+
+
+#### Checkout Tag
+
+No concept for checkout tags, but if you want it then you can create a branch with specific tag
+
+`git checkout -b <branch name> <tag name>`
+
