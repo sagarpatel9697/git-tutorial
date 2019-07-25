@@ -1,5 +1,5 @@
 # git-tutorial
-Topics of learning git and github in simple way.
+Topics of learning git and github in simple way. :blush:
 
 ## Getting Started
 
@@ -59,6 +59,10 @@ So git is distributed version control system.
 - GUI for repo
 - Manage team
 
+### What is a repo
+
+A repository a.k.a. repo is nothing but a collection of source code.
+
 ### Is GIT related to GITHUB
 
 NO !!!!!!
@@ -68,13 +72,32 @@ GIT can also be used with others repository management system like bitbucket.
 
 ![GIT Workflow](./images/workflow.jpg)
 
+![GIT Workflow exact](./images/git_workflow.png)
+
 ## Setup Repository
 
-1. Run `$ git init` command
-2. Add project files to folder and adding it to stage area via `$ git add` command
-3. Commit staged files with `$ git commit -m <Message>` command
-4. Link remote repository with local using `$ git remote add origin <repo url>` command
-5. Push all local repository commits to remote `$ git push`
+1. Run `$ git init` command or you can directly clon repo using `git clone <repo_url>`
+2. Link remote repository with local using `$ git remote add origin <repo url>` command
+3. Add project files to folder and adding it to stage area via `$ git add .` command
+4. Commit staged files with `$ git commit -m <Message>` command
+5. pull latest changes in local repo `$ git pull origin master`
+6. Push all local repository commits to remote `$ git push origin master`
+
+## General Commands
+
+* `git add` is a command used to add a file that is in the working directory to the staging area.
+
+* `git commit` is a command used to add all files that are staged to the local repository.
+
+* `git push` is a command used to add all committed files in the local repository to the remote repository. So in the remote repository, all files and changes will be visible to anyone with access to the remote repository.
+
+* `git fetch` is a command used to get files from the remote repository to the local repository but not into the working directory.
+
+* `git merge` is a command used to get the files from the local repository into the working directory.
+
+* `git pull` is command used to get files from the remote repository directly into the working directory. It is equivalent to a `git fetch` and a `git merge` .
+
+* Other useful commands: `git status`, `git log`, `git reset`, `git diff`
 
 
 ## Branching
@@ -146,3 +169,20 @@ No concept for checkout tags, but if you want it then you can create a branch wi
 
 `$ git checkout -b <branch name> <tag name>`
 
+### Revert back to the last committed version to the Git Repo
+
+`$ git checkout .`
+
+
+## One More Thing:
+
+```.gitignore```
+
+So what is it?
+
+`.gitignore` tells git which files (or patterns) it should ignore. It's usually used to avoid committing transient files from your working directory that aren't useful to other collaborators, such as compilation products, temporary files IDEs create, etc.
+
+---
+Thanks
+
+> ## Made by Kumu with :heart:
