@@ -185,4 +185,4 @@ So what is it?
 ---
 Thanks
 
-> ## Made by Kumu with :heart:
+> ## Made by Byteparity with :heart:
